@@ -2,8 +2,8 @@ require('dotenv').config()
 const PORT = process.env.PORT;
 const express = require('express');
 
-const usersRoutes = require('./routes/users');
-
+const productRoutes = require('./routes/products');
+const orderRoutes = require('./routes/orders');
 const middlewareLogRequest = require('./middleware/logs');
 
 const app = express();
@@ -11,7 +11,8 @@ const app = express();
 app.use(middlewareLogRequest);
 app.use(express.json());
 
-app.use('/users', usersRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/orders', orderRoutes);
 
 app.use((err, req, res, next) => {
     res.json({
@@ -20,5 +21,5 @@ app.use((err, req, res, next) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`it's alive on http://localhost:${PORT}`);
+    console.log(`http://localhost:${PORT}`);
 })
