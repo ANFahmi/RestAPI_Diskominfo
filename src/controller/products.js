@@ -113,7 +113,7 @@ const updateProduct = async (req, res) => {
         }
 
         res.json({
-            message: 'UPDATE product success',
+            message: 'Product updated successfully',
             data: updatedProduct
         });
     } catch (error) {
