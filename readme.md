@@ -19,11 +19,7 @@ Go to the project directory
 ```bash
   cd my-project
 ```
-Change env format
-
-```bash
-  env -> .env
-```
+Change file format from env to .env
 
 Install dependencies
 
