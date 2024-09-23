@@ -61,7 +61,7 @@ http://localhost:8080
 #### Create Products
 
 ```http
-  GET /api/products
+  POST /api/products
 ```
 
 | Parameter | Type     | Description                       |
@@ -74,7 +74,7 @@ http://localhost:8080
 #### Update Products
 
 ```http
-  GET /api/products/${id}
+  PUT /api/products/${id}
 ```
 
 | Parameter | Type     | Description                       |
@@ -87,7 +87,7 @@ http://localhost:8080
 #### Delete Products
 
 ```http
-  GET /api/products/${id}
+  DELETE /api/products/${id}
 ```
 
 | Parameter | Type     | Description                       |
@@ -113,7 +113,7 @@ http://localhost:8080
 #### Create Order
 
 ```http
-  GET /api/orders
+  POST /api/orders
 ```
 
 | Parameter | Type     | Description                       |
@@ -123,10 +123,10 @@ http://localhost:8080
 | `quantity`      | `int` | **Required** |
 
 
-#### Create Order
+#### Delete Order
 
 ```http
-  GET /api/orders/${id}
+  DELETE /api/orders/${id}
 ```
 
 | Parameter | Type     | Description                       |
